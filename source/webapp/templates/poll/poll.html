@@ -9,7 +9,6 @@
       <p>
         <a href="{% url 'poll_edit' poll.pk %}" class="btn btn-outline-dark">Edit</a>
         <a href="{% url 'poll_delete' poll.pk %}" class="btn btn-outline-dark ml-5">Delete</a>
-          <a href="#add_comment" class="btn btn-outline-dark ml-4">Add answer</a>
       </p>
   </div>
 </div>
@@ -31,13 +30,8 @@
             <p>No choices yet.</p>
         {% endfor %}
     </div>
-
+    <a href="{% url 'poll_choice_add' poll.pk %}" class="btn btn-outline-dark ml-4">Add сhoice</a>
     {% if is_paginated %}
         {% include 'partial/pagination.html' %}
     {% endif %}
-    <h4><b>Add new choices:</b></h4>
-    <form action="" method="POST" id="add_comment">
-        {% include 'partial/form.html' with button_text='Add' %}
-    </form>
-
 {% endblock %}

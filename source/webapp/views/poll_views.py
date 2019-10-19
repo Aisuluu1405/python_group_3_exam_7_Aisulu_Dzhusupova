@@ -1,12 +1,6 @@
 from django.core.paginator import Paginator
-
-# from django.http import request
-from django.shortcuts import redirect, render, get_object_or_404
 from django.urls import reverse, reverse_lazy
-from django.utils.http import urlencode
-
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-
 from webapp.forms import PollForm, PollChoiceForm
 from webapp.models import Poll
 
@@ -33,7 +27,7 @@ class PollView(DetailView):
         return context
 
     def paginate_choices_to_context(self, choices, context):
-        paginator = Paginator(choices, 3, 0)
+        paginator = Paginator(choices, 5, 0)
         page_number = self.request.GET.get('page', 1)
         page = paginator.get_page(page_number)
         context['paginator'] = paginator
