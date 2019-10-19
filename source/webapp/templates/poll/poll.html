@@ -13,24 +13,26 @@
   </div>
 </div>
     <hr>
+     <a href="{% url 'poll_choice_add' poll.pk %}" class="btn btn-outline-dark w-25 mt-5 ml-4 mb-5">Add сhoice</a>
     <h3><b>Choices for this poll:</b></h3>
     {% if is_paginated %}
         {% include 'partial/pagination.html' %}
     {% endif %}
     <div class="choices-list">
         {% for choice in choices %}
-            <div class="choice">
-                <div class="pre">{{ choice.text }}</div>
+            <div class="card border-light mt-3">
+                <div class="pre mt-3 ml-4"><b>{{ choice.text }}</b></div>
                 <p class="comment-links">
-                    <a href="{% url 'choice_edit' choice.pk %}">Edit</a>
-                    <a href="{% url 'choice_delete' choice.pk %}">Delete</a>
+                    <a href="{% url 'choice_edit' choice.pk %}" class="btn btn-outline-dark m-3 btn_1">Edit</a>
+                    <a href="{% url 'choice_delete' choice.pk %}" class="btn btn-outline-dark m-3 btn_1">Delete</a>
+
                 </p>
             </div>
         {% empty %}
             <p>No choices yet.</p>
         {% endfor %}
     </div>
-    <a href="{% url 'poll_choice_add' poll.pk %}" class="btn btn-outline-dark ml-4">Add сhoice</a>
+
     {% if is_paginated %}
         {% include 'partial/pagination.html' %}
     {% endif %}

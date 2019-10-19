@@ -19,3 +19,80 @@ h1{
     text-align: center;
     margin-top: 30px;
 }
+.required{
+    font-weight: bold;
+    color: #bf1f6d;
+}
+.form-error {
+    color: red;
+    font-size: 18px;
+    margin: 5px 0 0 0
+}
+
+.field-error {
+    border: solid 1px red;
+    box-shadow: red 0 0 3px;
+}
+.form-control {
+    justify-content: center;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    display: block;
+    width: 80%;
+    border: solid 1px lightgray;
+    box-sizing: border-box;
+    background: white;
+    margin-left: 70px;
+}
+.fields{
+    font-size: 20px;
+}
+.pagination {
+    text-align: center;
+    margin-left: 28%;
+    padding-bottom: 18px;
+}
+.pagination a, .page-disabled, .page-active {
+    display: inline-block;
+    border: solid 1px #6a7ddd;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 5px;
+}
+.pagination a {
+    background: #6a7ddd;
+    color: white;
+    text-decoration: none;
+}
+.pagination a:hover {
+   background: #6a7dff;
+   text-decoration: underline;
+}
+.page-disabled {
+    background: #6a7dcc;
+    color: #dddddd
+}
+.page-input {
+    font-size: 14px;
+    width: 40px;
+    text-align: center;
+}
+.page-active {
+    background: #ff7e5f;
+}
+.btn{
+    width: 90px;
+}
+.pre{
+    white-space: pre-wrap;
+    font-size: 20px;
+}
+.btn_1{
+    width: 70px;
+    font-size: 15px;
+    height: 30px;
+}
+h3{
+    text-align: center;
+}
