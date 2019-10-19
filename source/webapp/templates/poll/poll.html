@@ -22,8 +22,8 @@
             <div class="choice">
                 <div class="pre">{{ choice.text }}</div>
                 <p class="comment-links">
-                    <a href="">Edit</a>
-                    <a href="">Delete</a>
+                    <a href="{% url 'choice_edit' choice.pk %}">Edit</a>
+                    <a href="{% url 'choice_delete' choice.pk %}">Delete</a>
                 </p>
             </div>
         {% empty %}

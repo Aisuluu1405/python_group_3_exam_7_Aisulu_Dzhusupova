@@ -13,10 +13,6 @@ class PollForm(forms.ModelForm):
 class ChoiceForm(forms.ModelForm):
     class Meta:
         model = Choice
-        fields = ['text', 'poll']
+        fields = ['text']
 
 
-class PollChoiceForm(forms.ModelForm):
-    class Meta:
-        model = Choice
-        exclude = ['poll']

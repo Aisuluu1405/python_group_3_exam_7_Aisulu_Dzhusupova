@@ -1,7 +1,7 @@
 from django.core.paginator import Paginator
 from django.urls import reverse, reverse_lazy
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from webapp.forms import PollForm, PollChoiceForm
+from webapp.forms import PollForm
 from webapp.models import Poll
 
 
@@ -21,7 +21,6 @@ class PollView(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['form'] = PollChoiceForm()
         choices = context['poll'].choices.all()
         self.paginate_choices_to_context(choices, context)
         return context

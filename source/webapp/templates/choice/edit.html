@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Choice{% endblock %}
+
+
+{% block content %}
+    <h1>Edit Choice</h1>
+    <form method="POST" action="{% url 'choice_edit' choice.pk %}">
+        {% include 'partial/form.html' with button_text='Edit'%}
+    </form>
+{% endblock %}
