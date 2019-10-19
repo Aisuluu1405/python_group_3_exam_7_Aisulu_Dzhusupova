@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card m-5">
+  <h5 class="card-header pt-5 font-weight-bold">Poll № {{poll.id }}</h5>
+  <div class="card-body">
+      <p class="pre">{{ poll.question }}</p>
+      <p>
+        <a href="{% url 'poll_edit' poll.pk %}" class="btn btn-outline-dark">Edit</a>
+        <a href="{% url 'poll_delete' poll.pk %}" class="btn btn-outline-dark ml-5">Delete</a>
+          <a href="#add_comment" class="btn btn-outline-dark ml-4">Add answer</a>
+      </p>
+  </div>
+</div>
+    <hr>
+    <h3><b>Choices for this poll:</b></h3>
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+    <div class="choices-list">
+        {% for choice in choices %}
+            <div class="choice">
+                <div class="pre">{{ choice.text }}</div>
+                <p class="comment-links">
+                    <a href="">Edit</a>
+                    <a href="">Delete</a>
+                </p>
+            </div>
+        {% empty %}
+            <p>No choices yet.</p>
+        {% endfor %}
+    </div>
+
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+    <h4><b>Add new choices:</b></h4>
+    <form action="" method="POST" id="add_comment">
+        {% include 'partial/form.html' with button_text='Add' %}
+    </form>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Polls</h1>
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+
+    <hr/>
+    {%  for poll in polls %}
+<div class="card m-5">
+  <div class="card-body">
+    <h5 class="card-title">Poll №{{poll.id }}</h5>
+    <p class="card-text">{{ poll.question }}</p>
+      <p>Date of creation poll: {{ poll.created| date:'d.m.Y H:i:s'}}</p>
+    <a href="{% url 'poll_view' poll.pk %}" class="btn btn-outline-dark ml-3">More</a>
+    <a href="{% url 'poll_edit' poll.pk %}" class="btn btn-outline-dark ml-3">Edit</a>
+    <a href="{% url 'poll_delete' poll.pk %}" class="btn btn-outline-dark ml-3">Delete</a>
+    <a href="#" class="btn btn-outline-dark ml-3">Add answer</a>
+  </div>
+</div>
+{% endfor %}
+    {% if is_paginated %}
+        {% include 'partial/pagination.html' %}
+    {% endif %}
+
+{% endblock %}
