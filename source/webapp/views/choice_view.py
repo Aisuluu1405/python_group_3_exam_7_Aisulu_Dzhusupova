@@ -15,6 +15,9 @@ class ChoiceForPollCreateView(CreateView):
         poll.choices.create(**form.cleaned_data)
         return redirect('poll_view', pk=poll_pk)
 
+    def get_success_url(self):
+        return reverse('poll_view', kwargs={'pk': self.object.poll.pk})
+
 
 class ChoiceEditView(UpdateView):
     model = Choice
