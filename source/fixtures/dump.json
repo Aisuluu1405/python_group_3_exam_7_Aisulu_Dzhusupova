@@ -1,0 +1,132 @@
+[
+{
+  "model": "webapp.poll",
+  "pk": 1,
+  "fields": {
+    "question": "How do you rate the service in the deposit department?",
+    "created": "2019-10-19T06:16:31.673Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 2,
+  "fields": {
+    "question": "How do you rate the service in the loan department?",
+    "created": "2019-10-19T06:16:51.188Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 3,
+  "fields": {
+    "question": "How do you rate the service in the credit card department?",
+    "created": "2019-10-19T06:17:17.176Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 4,
+  "fields": {
+    "question": "Do you think the interest rates on loans in our bank are overstated?",
+    "created": "2019-10-19T06:18:08.747Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 5,
+  "fields": {
+    "question": "Do you think our interest on deposits is low compared to other banks?",
+    "created": "2019-10-19T06:19:18.220Z"
+  }
+},
+{
+  "model": "webapp.poll",
+  "pk": 6,
+  "fields": {
+    "question": "Your opinion about the number of ATMs of our bank?",
+    "created": "2019-10-19T06:20:11.912Z"
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 1,
+  "fields": {
+    "text": "Like.",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 2,
+  "fields": {
+    "text": "I do not like.",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 3,
+  "fields": {
+    "text": "Need to improve the process.",
+    "poll": 1
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 4,
+  "fields": {
+    "text": "Everything is fine, no comments.",
+    "poll": 2
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 5,
+  "fields": {
+    "text": "I do not like.",
+    "poll": 2
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 6,
+  "fields": {
+    "text": "Very few, you need to expand the ATM network.",
+    "poll": 6
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 7,
+  "fields": {
+    "text": "Compared to other banks, interest suits.",
+    "poll": 5
+  }
+},
+{
+  "model": "webapp.choice",
+  "pk": 8,
+  "fields": {
+    "text": "Compared to other banks, interest is not satisfactory.",
+    "poll": 5
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$tfYGRnE3DmbN$NpuAPbiRb5Ertsn6bnAmZbhJET6RTrjsGHA14b6zQoQ=",
+    "last_login": "2019-10-19T06:14:42.481Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-10-19T05:29:14.236Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
